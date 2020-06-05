@@ -4,6 +4,7 @@ import Medic from "../assets/data/medicaments.json"
 import {Link} from "@react-navigation/native";
 
 export default class DetailsScreen extends React.Component{
+    //props pour recuprer les variables
     constructor(props) {
         super(props);
         this.state = {
@@ -12,6 +13,7 @@ export default class DetailsScreen extends React.Component{
     }
 
     renderList() {
+        //map pour parcourir un objet i 
         return this.state.data.map(i => {
             var bru = i.price-(i.price * 23)/100
             var brut = bru.toFixed(2)
