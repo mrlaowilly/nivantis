@@ -1,7 +1,5 @@
 # nivantis
-wis3
 
-npm install
-expo start
+npm install -> expo start
 
 enjoy
