@@ -1,0 +1,57 @@
+[
+    {
+      "authorization_holder": "ACCORD HEALTHCARE Limited",
+      "cis_code": "6 000 228 3",
+      "generic_groups": "ANASTROZOLE 1 mg - ARIMIDEX 1 mg, comprimé pelliculé.",
+      "iab": null,
+      "iab_improvements": null,
+      "id": 60002283,
+      "price": 168.76,
+      "title": "ANASTROZOLE ACCORD 1 mg, comprimé pelliculé"
+    },
+    {
+      "authorization_holder": "Laboratoires SAINT GERMAIN - Société Civile de Recherche",
+      "cis_code": "6 000 250 4",
+      "generic_groups": "RANITIDINE (CHLORHYDRATE DE) équivalant à RANITIDINE 150 mg - AZANTAC 150 mg, comprimé effervescent - RANIPLEX 150 mg, comprimé effervescent.",
+      "iab_improvements": null,
+      "id": 60002504,
+      "price": 11.58,
+      "title": "RANITIDINE BIOGARAN 150 mg, comprimé effervescent"
+    },
+    {
+      "authorization_holder": "Laboratoire FERRIER",
+      "cis_code": "6 000 274 6",
+      "generic_groups": null,
+      "iab": null,
+      "iab_improvements": null,
+      "id": 60002746,
+      "price": 11.58,
+      "title": "ACTAEA RACEMOSA FERRIER, degré de dilution compris entre 2CH et 30CH ou entre 4DH et 60DH"
+    },
+    {
+      "authorization_holder": "CHIESI SA",
+      "cis_code": "6 000 362 0",
+      "generic_groups": null,
+      "id": 60003620,
+      "price": 39.39,
+      "title": "BECLOSPIN 800 microgrammes/2 ml, suspension pour inhalation par nébuliseur en récipient unidose"
+    },
+    {
+      "authorization_holder": "TEVA SANTE",
+      "cis_code": "6 000 427 7",
+      "iab_improvements": null,
+      "id": 60004277,
+      "price": 2.26,
+      "title": "FENOFIBRATE TEVA 100 mg, gélule"
+    },
+    {
+      "authorization_holder": "EG LABO - Laboratoires EuroGenerics",
+      "cis_code": "6 000 448 7",
+      "generic_groups": "TRAMADOL (CHLORHYDRATE DE) 200 mg - CONTRAMAL L.P. 200 mg, comprimé pelliculé à libération prolongée - TOPALGIC L.P. 200 mg, comprimé à libération prolongée.",
+      "price": 14.67,
+      "iab": null,
+      "iab_improvements": null,
+      "id": 60004487,
+      "title": "TRAMADOL EG L.P. 200 mg, comprimé à libération prolongée"
+    }
+]
