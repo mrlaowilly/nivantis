@@ -52,7 +52,14 @@ export default function App() {
                 <Stack.Screen name="Version2" component={Version2Screen} options={{ title: 'Version 2' }} />
             </Stack.Navigator>
             <TouchableOpacity
-                onPress={() => alert('Hello, world!')}
+                onPress={() => alert(`
+A propos
+Texte a propos de Nivantis
+Notice
+Texte a propos de la notice
+Infos légales
+Texte a propos de l'information légales
+`)}
                 style={{ backgroundColor: 'lightgrey' }}>
                 <Text style={{ fontSize: 20, color: '#fff' }}>A propos / Notice / Infos légales</Text>
             </TouchableOpacity>
