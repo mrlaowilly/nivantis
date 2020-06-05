@@ -23,7 +23,10 @@ export default class DetailsScreen extends React.Component{
             var vente = vent.toFixed(2)
             return (
                 <Link key={i.id} style={styles.welcome}>
-                    {i.title}
+                    {i.title} prix = {i.price} €
+                    brut = {brut} remise = {remise}  €
+                    coef = {coeff} €
+                    Vente net = {vente} €
                 </Link>
             )
         })
