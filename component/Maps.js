@@ -88,8 +88,8 @@ export default function Maps() {
                 provider={PROVIDER_GOOGLE}
                 style={styles.map}
                 region={{
-                    latitude: 48.866667,
-                    longitude: 2.333333,
+                    latitude: mylat,
+                    longitude: mylong,
                     latitudeDelta:0.09,
                     longitudeDelta: 0.035,
                 }}
