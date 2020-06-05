@@ -18,6 +18,10 @@ Version 2: Détails officines et formulaires
                 title="Accès version 1"
                 onPress={() => navigation.navigate('Details')}
             />
+            <Button
+                title="Accès version 2"
+                onPress={() => navigation.navigate('Version2')}
+            />
         </View>
     );
 }
@@ -26,6 +30,15 @@ function DetailsScreen({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Ecran de la version</Text>
+            <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+        </View>
+    );
+}
+
+function Version2Screen({ navigation }) {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Ecran de la version 2</Text>
             <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
         </View>
     );
@@ -40,6 +53,7 @@ export default function App() {
           <Stack.Navigator initialRouteName="Home">
               <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Acceuil Nivantis DMO' }} />
               <Stack.Screen name="Details" component={DetailsScreen} options={{ title: 'Version 1' }} />
+              <Stack.Screen name="Version2" component={Version2Screen} options={{ title: 'Version 2' }} />
           </Stack.Navigator>
           <Image source={logo} style={styles.logo} />
           <Text style={styles.instructions}>
