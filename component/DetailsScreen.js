@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ListView, Button,SafeAreaView, ScrollView  } from 'react-native';
+import {StyleSheet, Text, View, ListView, Button, SafeAreaView, ScrollView, TouchableOpacity} from 'react-native';
 import Medic from "../assets/data/medicaments.json"
-import {Link} from "@react-navigation/native";
+import {Link, NavigationContainer} from "@react-navigation/native";
 
 export default class DetailsScreen extends React.Component{
     constructor(props) {
@@ -9,6 +9,19 @@ export default class DetailsScreen extends React.Component{
         this.state = {
             data: Medic,
         }
+    }
+
+    renderMedic(){
+        return this.state.data.map(y => {
+            var nameMedic = y.title
+            return (
+                <TouchableOpacity
+                    onPress={() => alert({nameMedic})}
+                    style={{ backgroundColor: 'lightblue' }}>
+                    <Text style={{ fontSize: 14, color: 'black', marginBottom: 20 }}>{nameMedic}</Text>
+                </TouchableOpacity>
+            )
+        })
     }
 
     renderList() {
@@ -35,6 +48,7 @@ export default class DetailsScreen extends React.Component{
     render() {
         return (
             <ScrollView style={styles.scrollView}>
+                {this.renderMedic()}
                 {this.renderList()}
             </ScrollView>
         );
@@ -51,6 +65,6 @@ const styles = StyleSheet.create({
     welcome: {
         fontSize: 15,
         textAlign: "center",
-        margin: 120,
+        margin: 20,
     },
 });
