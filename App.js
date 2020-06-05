@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import DetailsScree from "./component/DetailsScreen"
+import Maps from "./component/Maps";
 
 function HomeScreen({ navigation }) {
     return (
@@ -49,7 +50,7 @@ export default function App() {
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Acceuil Nivantis DMO' }} />
                 <Stack.Screen name="Details" component={DetailsScree} options={{ title: 'Version 1' }} />
-                <Stack.Screen name="Version2" component={Version2Screen} options={{ title: 'Version 2' }} />
+                <Stack.Screen name="Version2" component={Maps} options={{ title: 'Version 2' }} />
             </Stack.Navigator>
             <TouchableOpacity
                 onPress={() => alert(`
