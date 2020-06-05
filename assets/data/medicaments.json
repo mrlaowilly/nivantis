@@ -53,5 +53,31 @@
       "iab_improvements": null,
       "id": 60004487,
       "title": "TRAMADOL EG L.P. 200 mg, comprimé à libération prolongée"
-    }
+    },
+  {
+    "authorization_holder": "CHIEShhhI SA",
+    "cis_code": "6 000 362 0",
+    "generic_groups": null,
+    "id": 600036200,
+    "price": 39.39,
+    "title": "RABECLOSPIN 800 microgrammes/2 ml, suspension pour inhalation par nébuliseur en récipient unidose"
+  },
+  {
+    "authorization_holder": "TEVA SANTE",
+    "cis_code": "6 000 427 7",
+    "iab_improvements": null,
+    "id": 600042770,
+    "price": 2.26,
+    "title": "RAFENOFIBRATE TEVA 100 mg, gélule"
+  },
+  {
+    "authorization_holder": "EG LABO - Laboratoires EuroGenerics",
+    "cis_code": "6 000 448 7",
+    "generic_groups": "TRAMADOL (CHLORHYDRATE DE) 200 mg - CONTRAMAL L.P. 200 mg, comprimé pelliculé à libération prolongée - TOPALGIC L.P. 200 mg, comprimé à libération prolongée.",
+    "price": 14.67,
+    "iab": null,
+    "iab_improvements": null,
+    "id": 600044870,
+    "title": "RATRAMADOL EG L.P. 200 mg, comprimé à libération prolongée"
+  }
 ]

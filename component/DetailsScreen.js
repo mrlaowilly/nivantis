@@ -1,9 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ListView, Button,TouchableOpacity, ScrollView, Alert  } from 'react-native';
 import Medic from "../assets/data/medicaments.json"
-import {Link} from "@react-navigation/native";
-
-
 
 export default class DetailsScreen extends React.Component{
     //props pour recuprer les variables
@@ -27,11 +24,9 @@ export default class DetailsScreen extends React.Component{
             if (id === i.id){
                 Alert.alert(
                     'Information complementaire: ',
-                    'Coeff = '+ coeff +'€, Remise = ' +remise+ 'Vente Net ='+vente+'€',
-
+                    'Coeff = '+ coeff +'€\nRemise = ' +remise+ '\nVente Net ='+vente+'€',
                 )
             }
-
         })
     }
 
@@ -39,11 +34,9 @@ export default class DetailsScreen extends React.Component{
         //map pour parcourir un objet i 
         return this.state.data.map(i => {
             return (
-
                 <TouchableOpacity key={i} style={styles.welcome} onPress={() => this.renderById(i.id)} >
                     <Text>{i.title}</Text>
                 </TouchableOpacity>
-
             )
         })
     }
