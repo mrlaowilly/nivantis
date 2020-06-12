@@ -4,7 +4,7 @@ import Constants from 'expo-constants';
 import * as Location from 'expo-location';
 import MapView, {Callout, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import Pharmacie from '../assets/data/carte-des-pharmacies-de-paris'
-import Form from "./Form.js";
+/* import Form from "./Form.js"; */
 
 import * as  firebase from 'firebase';
 import 'firebase/firestore';
@@ -103,11 +103,11 @@ export default function Maps() {
             else{
                 return (
                     map = <Marker coordinate={{latitude: latt, longitude: long}}>
-                        <Callout onPress={() => form(i.fields.complrs)}>
+                        <Callout onPress={() => form(i.recordid)}>
                                 <Text style={styles.paragraph}>{i.fields.complrs}</Text>
                                 <Text style={styles.paragraph}>telephone : +331{i.fields.telephone}</Text>
                                 <Text style={styles.paragraph}>Adresse : {i.fields.numvoie} {i.fields.typvoie} {i.fields.voie} {i.fields.cp}</Text>
-                                <Button variant="primary" title={i.fields.complrs} onPress={() => form(i.fields.complrs)}>
+                                <Button variant="primary" title={i.fields.complrs}>
                                 </Button>
                         </Callout>
                     </Marker>

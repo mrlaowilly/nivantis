@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import DetailsScree from "./component/DetailsScreen"
 import Maps from "./component/Maps";
+import Form from "./component/Form";
+
 
 function HomeScreen({ navigation }) {
     return (
@@ -27,6 +29,15 @@ Version 2: Détails officines et formulaires
             <Button
                 title="Accès version 2"
                 onPress={() => navigation.navigate('Version2')}
+            />
+            <Text>
+                {`
+Version 3: Formulaire
+`}
+            </Text>
+            <Button
+                title="Accès version 3"
+                onPress={() => navigation.navigate('Version3')}
             />
         </View>
     );
@@ -51,6 +62,7 @@ export default function App() {
                 <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Acceuil Nivantis DMO' }} />
                 <Stack.Screen name="Details" component={DetailsScree} options={{ title: 'Version 1' }} />
                 <Stack.Screen name="Version2" component={Maps} options={{ title: 'Version 2' }} />
+                <Stack.Screen name="Version3" component={Form} options={{ title: 'Version 3' }} />
             </Stack.Navigator>
             <TouchableOpacity
                 onPress={() => alert(`
