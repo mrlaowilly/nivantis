@@ -23,7 +23,7 @@ Version 1: Détails médicaments
             />
             <Text>
                 {`
-Version 2: Détails officines et formulaires
+Version 2: Détails officines
 `}
             </Text>
             <Button

@@ -20,9 +20,9 @@ firebase.initializeApp(FirebaseConfig);
 const Form = t.form.Form;
 
 const User = t.struct({
-    email: t.String,
-    username: t.maybe(t.String),
-    password: t.String,
+    champ1: t.String,
+    champ2: t.maybe(t.String),
+    champ3: t.String,
     terms: t.Boolean
 });
 
@@ -52,14 +52,19 @@ const formStyles = {
 
 const options = {
     fields: {
-        email: {
-            error: 'Without an email address how are you going to reset your password when you forget it?'
+        champ1: {
+            label: 'Horaire',
+            error: 'Veuillez rentrer des horaires'
         },
-        password: {
-            error: 'Choose something you use on a dozen other sites or something you won\'t remember'
+        champ2: {
+            label: 'Jour de garde',
+        },
+        champ3: {
+            label: 'Nombre de pharmacien présent',
+            error: 'Veuillez rentrer un nombre de pharmacien'
         },
         terms: {
-            label: 'Agree to Terms',
+            label: 'Etre rappelé par un conseillé Nivantis',
         },
     },
     stylesheet: formStyles,
@@ -69,8 +74,11 @@ export default class App extends Component {
 
     handleSubmit = () => {
         const value = this._form.getValue();
-        console.log(firebase.database().ref('/test/').push())
+        console.log(firebase.database().ref('/test/').push(value));
         console.log(value);
+        if (value !== null){
+            this.props.navigation.navigate('Home');
+        }
     }
 
     render() {
@@ -82,7 +90,7 @@ export default class App extends Component {
                     options={options}
                 />
                 <Button
-                    title="Sign Up!"
+                    title="Envoyer les informations"
                     onPress={this.handleSubmit}
                 />
             </View>
