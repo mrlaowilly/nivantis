@@ -15,6 +15,7 @@
     "expo": "~37.0.3",
     "expo-image-picker": "~8.1.0",
     "expo-sharing": "~8.1.0",
+    "firebase": "^7.15.1",
     "react": "~16.9.0",
     "react-cookie-consent": "^5.0.1",
     "react-dom": "~16.9.0",
