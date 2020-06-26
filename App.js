@@ -8,7 +8,7 @@ import ListV3 from "./component/ListV3";
 
 import DetailsScree from "./component/DetailsScreen"
 import Maps from "./component/Maps";
-import Form from "./component/Form";
+import Form from "./component/Forms";
 import Medic from "./assets/data/medicaments";
 
 
