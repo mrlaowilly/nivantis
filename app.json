@@ -7,6 +7,7 @@
       "android",
       "web"
     ],
+    "sdkVersion": "37.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,8 +22,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.nivini.myapp",
+      "versionCode": 1
+    },
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.mrlao.ProjetNivantis"
     }
   }
 }
