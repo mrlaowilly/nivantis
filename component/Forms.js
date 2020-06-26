@@ -5,6 +5,7 @@ import t from 'tcomb-form-native';
 import * as  firebase from 'firebase';
 import 'firebase/firestore';
 
+
 const FirebaseConfig = {
     apiKey: "AIzaSyDZCGCUnST8S9PI1HIonxY6wWCJ0MacASU",
     authDomain: "vivantis-ea16a.firebaseapp.com",
@@ -15,16 +16,19 @@ const FirebaseConfig = {
     appId: "1:410708130758:web:ec7cbcbf245dd5055150c7",
     measurementId: "G-WS916B3L2V"
 };
+
 firebase.initializeApp(FirebaseConfig);
 
 const Form = t.form.Form;
 
 const User = t.struct({
-    email: t.String,
-    username: t.maybe(t.String),
-    password: t.String,
+    champ1: t.String,
+    champ2: t.maybe(t.String),
+    champ3: t.String,
     terms: t.Boolean
 });
+
+
 
 const formStyles = {
     ...Form.stylesheet,
@@ -52,25 +56,45 @@ const formStyles = {
 
 const options = {
     fields: {
-        email: {
-            error: 'Without an email address how are you going to reset your password when you forget it?'
+        champ1: {
+            label: 'Horaire',
+            error: 'Veuillez rentrer des horaires'
         },
-        password: {
-            error: 'Choose something you use on a dozen other sites or something you won\'t remember'
+        champ2: {
+            label: 'Jour de garde',
+        },
+        champ3: {
+            label: 'Nombre de pharmacien présent',
+            error: 'Veuillez rentrer un nombre de pharmacien'
         },
         terms: {
-            label: 'Agree to Terms',
+            label: 'Etre rappelé par un conseillé Nivantis',
         },
     },
     stylesheet: formStyles,
 };
 
-export default class App extends Component {
+export default class Forms extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            id : this.props.route.params,
+        }
+    }
 
     handleSubmit = () => {
         const value = this._form.getValue();
-        console.log(firebase.database().ref('/test/').push())
-        console.log(value);
+        var id = toString(this.state.id)
+        var ids = this.state.id
+        console.log(id)
+        console.log(ids)
+
+        console.log(firebase.database().ref('/test/'+ ids.id).push(value));
+        console.log(User);
+        if (value !== null){
+            this.props.navigation.navigate('Home');
+        }
     }
 
     render() {
@@ -82,7 +106,7 @@ export default class App extends Component {
                     options={options}
                 />
                 <Button
-                    title="Sign Up!"
+                    title="Envoyer les informations"
                     onPress={this.handleSubmit}
                 />
             </View>
