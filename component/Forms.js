@@ -5,6 +5,7 @@ import t from 'tcomb-form-native';
 import * as  firebase from 'firebase';
 import 'firebase/firestore';
 
+
 const FirebaseConfig = {
     apiKey: "AIzaSyDZCGCUnST8S9PI1HIonxY6wWCJ0MacASU",
     authDomain: "vivantis-ea16a.firebaseapp.com",
@@ -15,6 +16,7 @@ const FirebaseConfig = {
     appId: "1:410708130758:web:ec7cbcbf245dd5055150c7",
     measurementId: "G-WS916B3L2V"
 };
+
 firebase.initializeApp(FirebaseConfig);
 
 const Form = t.form.Form;
@@ -25,6 +27,8 @@ const User = t.struct({
     champ3: t.String,
     terms: t.Boolean
 });
+
+
 
 const formStyles = {
     ...Form.stylesheet,
@@ -70,12 +74,24 @@ const options = {
     stylesheet: formStyles,
 };
 
-export default class App extends Component {
+export default class Forms extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            id : this.props.route.params,
+        }
+    }
 
     handleSubmit = () => {
         const value = this._form.getValue();
-        console.log(firebase.database().ref('/test/').push(value));
-        console.log(value);
+        var id = toString(this.state.id)
+        var ids = this.state.id
+        console.log(id)
+        console.log(ids)
+
+        console.log(firebase.database().ref('/test/'+ ids.id).push(value));
+        console.log(User);
         if (value !== null){
             this.props.navigation.navigate('Home');
         }
