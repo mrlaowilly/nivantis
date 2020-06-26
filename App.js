@@ -4,6 +4,7 @@ import logo from './assets/logo.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Banner } from 'react-native-paper';
+import ListV3 from "./component/ListV3";
 
 import DetailsScree from "./component/DetailsScreen"
 import Maps from "./component/Maps";
@@ -92,7 +93,8 @@ export default class MyComponent extends React.Component {
                     <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Acceuil Nivantis DMO' }} />
                     <Stack.Screen name="Details" component={DetailsScree} options={{ title: 'Version 1' }} />
                     <Stack.Screen name="Version2" component={Maps} options={{ title: 'Version 2' }} />
-                    <Stack.Screen name="Version3" component={Form} options={{ title: 'Version 3' }} />
+                    <Stack.Screen name="Version3" component={ListV3} options={{ title: 'Version 3' }} />
+                    <Stack.Screen name="Forms" component={Form} options={{ title: 'Forms' }} />
                 </Stack.Navigator>
                 <TouchableOpacity
                     onPress={() => alert(`
